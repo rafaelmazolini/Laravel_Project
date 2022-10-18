@@ -45,7 +45,7 @@ php artisan key:generate
 Montar o Banco de Dados
 ```sh
 php artisan migrate
-
+```
 
 
 Acesse o projeto
