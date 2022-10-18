@@ -12,5 +12,7 @@ class Professor extends Model
     protected $guarded = [];
     protected $table = 'professores';
     
-    
+    public function materia(){
+        return $this -> belongsTo(Materia::class);
+    }
 }

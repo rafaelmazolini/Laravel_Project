@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materia;
+use App\Models\Professor;
 use Illuminate\Http\Request;
 
 class MateriaController extends Controller
@@ -12,15 +13,16 @@ class MateriaController extends Controller
     }
     
     public function addMateria(Request $request){
-        $newMateria = new Materia;
-        $newMateria -> nome = $request -> materia;
-        $newMateria -> save();
+        $materia = Materia::create([
+            'nome' => $request -> materia,
+            'professor_id' => 0
+        ]);
         
-        return redirect('/');
+        return redirect() -> back();
     }
     
-    public function materiaInfos($id){
-        return view('materiaInfos', ['materias'  => Materia::where('id', $id) -> get()]);
+    public function materiaInfos($id, $professor){
+        return view('materiaInfos', ['materia'  => Materia::find($id), 'professor' => Professor::find($professor)]);
     }
     
 }

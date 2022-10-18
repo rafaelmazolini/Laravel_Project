@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Matérias</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -25,24 +26,27 @@
     
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div>
+                
+                <h1 style="margin-bottom: 20px;">Matérias</h1>
+            
+                
+                @foreach ($materias as $materia)
+                    <a href="{{ route('materia-infos', ['id' => $materia -> id, 'professor' => $materia -> professor_id]) }}" style="font-size: 20px; color:#e2e8f0">{{ $materia -> nome }}</a> <br>
+                @endforeach
+                
                 <form action="{{ route('addMateria') }}" method="post" accept-charset="UTF-8">
                     {{ csrf_field()}}
                 
-                    <label for="materia">Nova matéria</label> <br>
-                    <input type="text" name="materia">
-                    <button>Salvar matéria</button>
+                    <div class="input-group input-group-sm mb-3" style="margin-top:40px;">
+                      <div class="input-group-prepend" >
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Nova matéria</span>
+                      </div>
+                      <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" name="materia">
+                    </div>
+                    
+                    <button class="btn btn-dark">Salvar matéria</button>
     
                 </form>
-                
-                <h1>Matérias</h1>
-                
-                @foreach ($materias as $materia)
-                
-                    <a href="{{ route('materia-infos', $materia -> id) }}" style="font-size: 20px; color:#e2e8f0">{{ $materia -> nome }}</a> <br>
-                
-                @endforeach
-              
-                
                 
             </div>
         </div>

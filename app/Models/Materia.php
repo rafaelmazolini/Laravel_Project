@@ -12,6 +12,10 @@ class Materia extends Model
     use HasFactory;
     
     public function alunos(){
-        return $this -> belongsToMany(Aluno::class);
+        return $this -> belongsToMany(Aluno::class, 'aluno_materia');
+    }
+    
+    public function professor(){
+        return $this -> hasOne(Professor::class);
     }
 }

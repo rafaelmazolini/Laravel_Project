@@ -12,6 +12,10 @@ class Aluno extends Model
     use HasFactory;
     
     public function materias(){
-        return $this -> belongsToMany(Materia::class);
+        return $this -> belongsToMany(Materia::class, 'aluno_materia');
+    }
+    
+    public function filmes(){
+        return $this -> hasMany(Filmes::class);
     }
 }

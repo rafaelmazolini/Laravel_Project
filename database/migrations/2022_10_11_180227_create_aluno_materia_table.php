@@ -17,8 +17,8 @@ return new class extends Migration
     {
         Schema::create('aluno_materia', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Aluno::class) -> constrained();
             $table->foreignIdFor(Materia::class) -> constrained();
+            $table->foreignIdFor(Aluno::class) -> constrained();
             $table->timestamps();
         });
     }
