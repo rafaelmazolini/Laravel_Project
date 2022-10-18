@@ -1,12 +1,12 @@
 
 # Laravel - Raspadinha
 
-Rafael Mazolini - 22007411
-Matheus Ecke - 22004797
-Vinicius Godoy - 22006132
-Victor Aroni - 22000397
-Pedro Pistarini -22000341
-Pedro di Grazia -
+>Rafael Mazolini - 22007411
+>Matheus Ecke - 22004797
+>Vinicius Godoy - 22006132
+>Victor Aroni - 22000397
+>Pedro Pistarini -22000341
+>Pedro di Grazia -
 
 ### Passo a passo
 Clone Repositório criado a partir do template, entre na pasta e execute os comandos abaixo:
