@@ -6,7 +6,7 @@
 >Vinicius Godoy - 22006132
 >Victor Aroni - 22000397
 >Pedro Pistarini -22000341
->Pedro di Grazia - 22002293
+>Pedro Di Grazia - 22002293
 
 ### Passo a passo
 Clone Repositório criado a partir do template, entre na pasta e execute os comandos abaixo:
